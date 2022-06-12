@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title>Perbaharui Data Mahasiswa UMMI</title
+	</head>
+	<center>
+	<style type="text/css">
+	h1,h3
+	{
+		font-family: Calibri;
+		font-style: normal;
+		font-weight: bold;
+		color: Black;
+		text-align: center;
+	}
+	table
+	{
+		font-family: Calibri;
+		color: black;
+		font-size: 13pt;
+		font-style: normal;
+		background-color: #eff3f6;
+		border: 2px solid black
+	}
+	table.inner{border: 0px}
+	
+	</style>
+	<body bgcolor="#fff">
+	<h1>Perbaharui Nomor HP Mahasiswa</h1>
+	
+	<form action="./php/change_phone.php" method="POST">
+	<table align = "center" cellpadding = "10">
+	
+	<tr>
+	<td>Masukkan NIM: </td>
+	<td><input type = "text" name = "uid" maxlength = "10"/></td>
+	</tr>
+	
+	<tr>
+	<td>Nomor HP Baru: </td>
+	<td><input type="text" name="phone_number" maxlength = "10"/></td>
+	</tr>
+	
+	<tr>
+	<td colspan = "2" align = "center">
+	<input type = "submit" value = "Perbarui" tabindex = "4">
+	</tr>
+	</table>
+	</form>
+	<br/>
+	<br/>
+	<button onclick="window.location.href='update.html'">Batal</button>
+	
+	</body>
+	</center>
+</html>

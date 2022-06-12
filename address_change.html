@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+        <title>Ubah Data Mahasiswa</title>
+	</head>
+	<center>
+	<body bgcolor="#fff">
+    
+    <!-- css styling block -->
+	<style type="text/css">
+	h1,h3
+	{
+		font-family: Calibri;
+		font-style: normal;
+		font-weight: bold;
+		color: Black;
+		text-align: center;
+	}
+	table
+	{
+		font-family: Calibri;
+		color: black;
+		font-size: 13pt;
+		font-style: normal;
+		background-color: #eff3f6;
+		border: 2px solid black
+	}
+	table.inner{border: 0px}
+	
+	</style>
+    
+    <!-- heading for the page -->
+	<h1>Perbaharui data Alamat </h1>
+        
+	<!-- address change form -->
+	<form action="./php/change_address.php" method="POST">
+	<table align = "center" cellpadding = "10">
+	
+    <!-- Row to re-enter University ID  -->
+	<tr>
+	<td>Masukkan NIM: </td>
+	<td><input type = "text" name = "uid" maxlength = "10"/></td>
+	</tr>
+	
+    <!-- Row to enter new street address -->
+	<tr>
+	<td>Alamat: </td>
+	<td><input type="text" name="address" maxlength = "150"/></td>
+	</tr>
+	
+    <!-- Row to enter new city name -->
+	<tr>
+	<td>Kota: </td>
+	<td><input type="text" name="city" maxlength = "30"/></td>
+	</tr>
+	
+    <!-- Row to enter new zip code -->
+	<tr>
+	<td>Kode pos: </td>
+	<td><input type="text" name="zip_code" maxlength = "5"/></td>
+	</tr>
+	
+    <!-- Row with drop down menu to select new state -->
+	<tr>
+	<td>Provinsi</td>
+	<td>
+	<select name="state" id="state">
+	<option value="-1">Pilih</option>
+		<option value="aceh">Aceh</option>
+		<option value="Sumut">Sumatera Utara</option>
+		<option value="sumbar">Sumatera Barat</option>
+		<option value="Riau">Riau</option>
+		<option value="Jambi">Jambi</option>
+		<option value="Sumsel">Sumatera Selatan</option>
+		<option value="Bengkulu">Bengkulu</option>
+		<option value="Lampung">Lampung</option>
+		<option value="BaBel">Kep. Bangka Belitung</option>
+		<option value="kepRiau">Kepulauan Riau</option>
+		<option value="Jakarta">Jakarta</option>
+		<option value="Jabar">Jawa Barat</option>
+		<option value="Banten">Banten</option>
+		<option value="Jateng">Jawa Tengah</option>
+		<option value="Yogyakarta">Yogyakarta</option>
+		<option value="Jatim">Jawa Timur</option>
+		<option value="Kalbar">Kalimantan Barat</option>
+		<option value="Kalteng">Kalimantan Tengah</option>
+		<option value="Kalsel">Kalimantan Selatan</option>
+		<option value="Kaltim">Kalimantan Timur</option>
+		<option value="Kaltra">Kalimantan Utara</option>
+		<option value="Bali">Bali</option>
+		<option value="NTT">Nusa Tenggara Timur</option>
+		<option value="NTB">Nusa Tenggara Barat</option>
+		<option value="Sulut">Sulawesi Utara</option>
+		<option value="Sulteng">Sulawesi Tengah</option>
+		<option value="Sulsel">Sulawesi Selatan</option>
+		<option value="Sultengg">Sulawesi Tenggara</option>
+		<option value="Sulbar">Sulawesi Barat</option>
+		<option value="Gorontalo">Gorontalo</option>
+		<option value="Maluku">Maluku</option>
+		<option value="Maluku Utara">Maluku Utara</option>
+		<option value="Papua">Papua</option>
+		<option value="Papua Barat">Papua Barat</option>
+	</select>
+	</td>
+	</tr>
+	
+    <!-- Button to submit the form -->
+	<tr>
+	<td colspan = "2" align = "center">
+	<input type = "submit" value = "Perbarui" tabindex = "4">
+	</tr>
+	</table>
+	</form>
+	<br/>
+	<br/>
+        
+    <!-- Button to cancel the form submission and go back to prev page -->
+	<button onclick="window.location.href='update.html'">Batal</button>
+	
+	</body>
+	</center>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+        <title>Ubah Email</title>
+	</head>
+	<center>
+    <!-- css styling block -->
+	<style type="text/css">
+	h1,h3
+	{
+		font-family: Calibri;
+		font-style: normal;
+		font-weight: bold;
+		color: Black;
+		text-align: center;
+	}
+	table
+	{
+		font-family: Calibri;
+		color: black;
+		font-size: 13pt;
+		font-style: normal;
+		background-color: #eff3f6;
+		border: 2px solid black
+	}
+	table.inner{border: 0px}
+	
+	</style>
+	<body bgcolor="#fff">
+	<h1>Ubah Email Mahasiswa</h1>
+
+    <!-- form to update email-->
+	<form action="./php/change_email.php" method="POST">
+	<table align = "center" cellpadding = "10">
+	
+    <!-- row to re enter uid -->
+	<tr>
+	<td>Masukkan NIM: </td>
+	<td><input type = "text" name = "uid" maxlength = "10"/></td>
+	</tr>
+	
+    <!-- row to enter new email address -->
+	<tr>
+	<td>Alamat Email Baru: </td>
+	<td><input type="text" name="email_id" maxlength = "100"/></td>
+	</tr>
+	
+    <!-- button to submit the form -->
+	<tr>
+	<td colspan = "2" align = "center">
+	<input type = "submit" value = "Perbarui" tabindex = "4">
+	</tr>
+	</table>
+	</form>
+	<br/>
+	<br/>
+    
+    <!-- button to cancel the form and go back to prev page -->
+	<button onclick="window.location.href='update.html'">Batal</button>
+	
+	</body>
+	</center>
+</html>

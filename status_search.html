@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title>Cari Mahasiswa UMMI</title
+	</head>
+	<center>
+	<style type="text/css">
+	h1,h3
+	{
+		font-family: Calibri;
+		font-style: normal;
+		font-weight: bold;
+		color: Black;
+		text-align: center;
+	}
+	table
+	{
+		font-family: Calibri;
+		color: black;
+		font-size: 13pt;
+		font-style: normal;
+		background-color: #eff3f6;
+		border: 2px solid black
+	}
+	table.inner{border: 0px}
+	
+	</style>
+	<body bgcolor="#fff">
+	<h1>Cari Mahasiswa (Berdasarkan Status Kelulusan)</h1>
+	
+	<form action = "./php/status.php" method = "POST">
+	
+	<table align = "center" cellpadding = "10">
+	
+	<tr><h3>Tampilkan mahasiswa berdasarkan status kelulusan</h3></tr>
+	
+	<tr>
+	<td>
+	<input type="radio" name="status" value="undergrad"/> Belum Lulus 
+	<input type="radio" name="status" value="grad"/> Lulus
+	</td>
+		
+	<td colspan="2" align="center">
+	<input type="submit" value="Cari" tabindex="4">
+	</td>
+	</tr>
+	
+	</table>
+	</form>
+	<br/>
+	<br/>
+	<a href='search.html'>Cari mahasiswa</a>
+	<br/>
+	
+	<a href='homepage.html'>Kembali ke halaman utama</a>
+	</body>
+	</center>
+</html>
