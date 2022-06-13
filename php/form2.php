@@ -92,14 +92,14 @@ while($i < $num1){
 <br/>
 <a href="../search.html">Kembali ke laman sebelumnya</a>
 <br/>
-<a href="../homepage.html">Kembali ke laman utama</a>
+<a href="../index.html">Kembali ke laman utama</a>
 <?php 
 }
 // displaying error message if no rows are affected due to the query
 else{
 	echo "<h3>NIM tidak ditemukan di pangkalan data. Masukkan NIM yang valid!</h3>";
 	echo "<a href='../search.html'>Kembali ke laman sebelumnya</a></br>";
-	echo "<a href='../homepage.html'>Kembali ke laman utama</a>";
+	echo "<a href='../index.html'>Kembali ke laman utama</a>";
 }
 ?>
 

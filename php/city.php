@@ -64,15 +64,15 @@ while($i < $num6){
 <br/>
 <br/>
 <a href="../city_search.html">Kembali ke laman sebelumnya</a><br/>
-<a href="../homepage.html">Kembali ke laman utama</a>
+<a href="../index.html">Kembali ke laman utama</a>
 <?php
 }
 //if no rows are affected display error message
 else{
 	echo "<br/>";
 	echo "<b>Terjadi kesalahan karena salah satu alasan berikut:</b><br/>1. Anda tidak memasukkan nama. Masukkan kota pada bidang.<br/>2. Tidak ada mahasiswa dari " ."$city".".<br/><br/>";
-	echo "<a href='city_search.html'>Kembali ke laman sebelumnya</a></br>";
-	echo "<a href='homepage.html'>Kembali ke laman utama</a>";
+	echo "<a href='../city_search.html'>Kembali ke laman sebelumnya</a></br>";
+	echo "<a href='../index.html'>Kembali ke laman utama</a>";
 }
 
 ?>

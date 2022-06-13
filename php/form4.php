@@ -89,14 +89,14 @@ while($i < $num8)
 <br/>
 <br/>
 <br/>
-<a href="../homepage.html">Kembali ke laman utama</a>
+<a href="../index.html">Kembali ke laman utama</a>
 <?php	
 }
 else{
 	echo "<br/>";
 	echo "<h3>NIM tidak ada di pangkalan data!</h3>";
 	echo "<a href='../delete.html'>Kembali ke laman sebelumnya</a><br/>";
-	echo "<a href='../homepage.html'>Kembali ke laman utama</a><br/>";
+	echo "<a href='../index.html'>Kembali ke laman utama</a><br/>";
 }
 ?>
 

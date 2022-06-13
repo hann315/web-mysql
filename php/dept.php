@@ -65,7 +65,7 @@ while($i < $num5){
 <br/>
 <br/>
 <a href="../dept_search.html">Kembali ke laman sebelumnya</a><br/>
-<a href="../homepage.html">Kembali ke laman utama</a>
+<a href="../index.html">Kembali ke laman utama</a>
 <?php
 }
 //displaying error message if error or no rows to display
@@ -73,7 +73,7 @@ else{
 	echo "<br/>";
 	echo "<b>Terjadi kesalahan karena salah satu alasan berikut:</b><br/>1. Anda tidak memilih program studi. Pilih salah satu program studi di daftar.<br/>2. Tidak ada mahasiswa di program studi yang dipilih.<br/><br/><br/>";
 	echo "<a href='../dept_search.html'>Kembali ke laman sebelumnta</a></br>";
-	echo "<a href='../homepage.html'>Kembali ke laman utama</a>";
+	echo "<a href='../index.html'>Kembali ke laman utama</a>";
 }
 ?>
 </body>

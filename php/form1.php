@@ -35,7 +35,7 @@ if(empty($uid) || empty($username) || empty($first_name) || empty($last_name) ||
 	//header('Location: enroll.html');
 	echo "<h3>Terjadi kesalaahan! Cek seluruh bidang.</h3>";
 	echo "<a href='../enroll.html'>Kembali ke laman sebelumnya</a><br/>";
-	echo "<a href='../homepage.html'>Kembali ke laman utama</a><br/>";
+	echo "<a href='../index.html'>Kembali ke laman utama</a><br/>";
 	
 }else{
     //if uid exists, display error message and dont enroll student
@@ -45,7 +45,7 @@ if(empty($uid) || empty($username) || empty($first_name) || empty($last_name) ||
         $last_name = mysql_result($uid_check, 0, "last_name");
         echo "<h3>Mahasiswa ". "$first_name $last_name" . " telah terdaftar dengan NIM " .$uid . ".</h3>";
     echo "<a href='../enroll.html'>Kembali ke laman sebelumnya</a><br/>";
-	echo "<a href='../homepage.html'>Kembali ke laman utama</a><br/>";
+	echo "<a href='../index.html'>Kembali ke laman utama</a><br/>";
     mysql_close();
 }
 else
@@ -63,7 +63,7 @@ else
 	}	
 	echo "<br/>";
 	echo "<a href='../enroll.html'>Daftarkan mahasiswa lain</a><br/>";
-	echo "<a href='../homepage.html'>Kembali ke laman utama</a>";
+	echo "<a href='../index.html'>Kembali ke laman utama</a>";
 } 
 }
 ?>

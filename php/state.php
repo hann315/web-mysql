@@ -64,7 +64,7 @@ while($i < $num7){
 <br/>
 <br/>
 <a href="../state_search.html">Kembali ke laman sebelumnya</a><br/>
-<a href="../homepage.html">Kembali ke laman utama</a>
+<a href="../index.html">Kembali ke laman utama</a>
 
 <?php 
 }
@@ -72,7 +72,7 @@ else{
 	echo "<br/>";
 	echo "<b>Terjadi kesalahan karena salah satu alasan berikut:</b><br/>1. Anda tidak memilih provinsi. Pilih salah satu provinsi di daftar.<br/>2. Tidak ada mahasiswa dari provinsi terpilih.<br/><br/>";
 	echo "<a href='../state_search.html'>Kembali ke laman sebelumnya</a></br>";
-	echo "<a href='../homepage.html'>Kembali ke laman utama</a>";
+	echo "<a href='../index.html'>Kembali ke laman utama</a>";
 }
 ?>
 <br/>

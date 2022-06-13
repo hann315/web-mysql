@@ -87,13 +87,13 @@ while($i < $num10){
 <br/>
 <a href="../update.html">Kembali ke laman sebelumnya</a>
 <br/>
-<a href="../homepage.html">Kembali ke laman utama</a>	
+<a href="../index.html">Kembali ke laman utama</a>	
 <?php
 }
 else{
 	echo "<h3>NIM tidak ditemukan di pangkalan data. Masukkan NIM yang valid!</h3>";
 	echo "<a href='../update.html'>Kembali ke laman sebelumnya</a></br>";
-	echo "<a href='../homepage.html'>Kembali ke laman utama</a>";
+	echo "<a href='../index.html'>Kembali ke laman utama</a>";
 }
 ?>
 </body>

@@ -59,13 +59,13 @@ while($i < $num4){
 <br/>
 <br/>
 <a href="../status_search.html">Kembali ke laman sebelumnya</a><br/>
-<a href="../homepage.html">Kembali ke laman utama</a>
+<a href="../index.html">Kembali ke laman utama</a>
 <?php 
 }
 else{
 	echo "<b>Terjadi kesalahan karena salah satu alasan berikut:</b><br/>1. Anda tidak memilih status kelulusan. Pilih salah satu program studi di daftar.<br/>2. Tidak ada mahasiswa di status kelulusan yang dipilih.<br/><br/><br/>";
 	echo "<a href='../status_search.html'>Kembali ke laman sebelumnya</a></br>";
-	echo "<a href='../homepage.html'>Kembali ke laman utama</a>";
+	echo "<a href='../index.html'>Kembali ke laman utama</a>";
 }
 ?>
 
