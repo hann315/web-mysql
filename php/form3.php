@@ -3,6 +3,7 @@
 <center>
 <img src="logo.png" alt="Logo UMMI" style="width:175px"/>
 <body bgcolor="#fff">
+<br>
 <!-- css styling block -->
 <style type="text/css">
 table
@@ -32,7 +33,7 @@ $result10 = mysql_query($query10);
 $num10 = mysql_num_rows($result10);
 
 if(mysql_affected_rows() > 0){
-echo "<b>Hanya alamat email, nomor HP, dan alamat yang dapat diperbarui!</b><br/><h3>Mahasiswa dengan NIM " ."<i>$uid</i>". " memiliki detail berikut:</h3>";
+echo "<b>Hanya alamat email, nomor HP, dan alamat yang dapat diperbarui!</b><br/><h3>Mahasiswa dengan NIM " ."$uid". " memiliki detail berikut:</h3>";
 ?>
 <table border = "1" cellspacing="4" cellpadding="10">
 <tr>

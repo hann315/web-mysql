@@ -3,6 +3,7 @@
 <body bgcolor="#fff">
 <center>
 <img src="logo.png" alt="Logo UMMI" style="width:175px"/>
+<br>
 <?php include 'database.php'?>
 
 <?php

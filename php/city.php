@@ -3,6 +3,7 @@
 <center>
 <img src="logo.png" alt="Logo UMMI" style="width:175px"/>
 <body bgcolor="#fff">
+<br>
     
 <!-- css styling block -->
 <style type="text/css">
