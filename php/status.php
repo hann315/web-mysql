@@ -28,7 +28,7 @@ $query4 = "select uid, username, first_name, last_name, dept from student where 
 $result4 = mysql_query($query4);
 $num4 = mysql_num_rows($result4);
 if(mysql_affected_rows() > 0){
-	echo "<h3>Daftar mahasiswa dengan status kelulusan: " . " " . "$status" . "</h3>";
+	echo "<h3>Daftar mahasiswa dengan status" . " " . "$status" . "</h3>";
 //echo "<b>Database output</b><br/><br/>";
 ?>
 <table border = "1" cellspacing="4" cellpadding="10">
