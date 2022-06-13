@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang = "en">
 <center>
-<body bgcolor="#f4d6a0">
+<img src="logo.png" alt="Logo UMMI" style="width:175px"/>
+<body bgcolor="#fff">
 <style type="text/css">
 table
 	{
@@ -31,12 +32,12 @@ if(mysql_affected_rows() > 0){
 ?>
 <table border = "1" cellspacing="4" cellpadding="10">
 <tr>
-<td><font face="Arial, Helvetica, sans-serif"><b>Username</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Name</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Status</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Department</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>City</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Zip Code</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Nama Pengguna</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Nama</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Status Kelulusan</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Program Studi</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Kota</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Kode Pos</b></font></td>
 </tr>
 <?php
 $i = 0;
@@ -62,16 +63,16 @@ while($i < $num7){
 </table>
 <br/>
 <br/>
-<a href="state_search.html">Go back to previous page</a><br/>
-<a href="homepage.html">Go back to homepage</a>
+<a href="../state_search.html">Kembali ke laman sebelumnya</a><br/>
+<a href="../homepage.html">Kembali ke laman utama</a>
 
 <?php 
 }
 else{
 	echo "<br/>";
-	echo "<b>Error has occured due to one of the following reasons:</b><br/>1. You did not choose a state. Please choose a state from the drop down list.<br/>2. There are no students from the choosen state.<br/><br/>";
-	echo "<a href='state_search.html'>Go back to previous page</a></br>";
-	echo "<a href='homepage.html'>Go back to homepage</a>";
+	echo "<b>Terjadi kesalahan karena salah satu alasan berikut:</b><br/>1. Anda tidak memilih provinsi. Pilih salah satu provinsi di daftar.<br/>2. Tidak ada mahasiswa dari provinsi terpilih.<br/><br/>";
+	echo "<a href='../state_search.html'>Kembali ke laman sebelumnya</a></br>";
+	echo "<a href='../homepage.html'>Kembali ke laman utama</a>";
 }
 ?>
 <br/>

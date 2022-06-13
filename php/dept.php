@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang = "en">
 <center>
-<body bgcolor="#f4d6a0">
+<img src="logo.png" alt="Logo UMMI" style="width:175px"/>
+<body bgcolor="#fff">
 <!-- css styling block -->
 <style type="text/css">
 table
@@ -38,10 +39,10 @@ if(mysql_affected_rows() > 0 ){
 ?>
 <table border = "1" cellspacing="4" cellpadding="10">
 <tr>
-<td><font face="Arial, Helvetica, sans-serif"><b>University ID</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Username</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Name</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Status</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>NIM</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Nama Pengguna</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Nama</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Status Kelulusan</b></font></td>
 </tr>
 <?php 
 $i = 0;
@@ -63,16 +64,16 @@ while($i < $num5){
 </table>
 <br/>
 <br/>
-<a href="dept_search.html">Go back to previous page</a><br/>
-<a href="homepage.html">Go back to homepage</a>
+<a href="../dept_search.html">Kembali ke laman sebelumnya</a><br/>
+<a href="../homepage.html">Kembali ke laman utama</a>
 <?php
 }
 //displaying error message if error or no rows to display
 else{
 	echo "<br/>";
-	echo "<b>Error has occured due to one of the following reasons:</b><br/>1. You did not choose a code. Please choose a department from the drop down list.<br/>2. There are no students in the choosen department.<br/><br/><br/>";
-	echo "<a href='dept_search.html'>Go back to previous page</a></br>";
-	echo "<a href='homepage.html'>Go back to homepage</a>";
+	echo "<b>Terjadi kesalahan karena salah satu alasan berikut:</b><br/>1. Anda tidak memilih program studi. Pilih salah satu program studi di daftar.<br/>2. Tidak ada mahasiswa di program studi yang dipilih.<br/><br/><br/>";
+	echo "<a href='../dept_search.html'>Kembali ke laman sebelumnta</a></br>";
+	echo "<a href='../homepage.html'>Kembali ke laman utama</a>";
 }
 ?>
 </body>

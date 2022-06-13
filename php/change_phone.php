@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang = "en">
 <center>
-<body bgcolor="#f4d6a0">
+<img src="logo.png" alt="Logo UMMI" style="width:175px"/>
+<body bgcolor="#fff">
 
 <!-- including file for database connection -->
 <?php include 'database.php'; ?>
@@ -20,13 +21,13 @@ $result12 = mysql_query($query12);
 
 //checking to see that no fields were empty
 if (empty($uid) || empty($phone_number)){
-	echo "<h3>Error has occured. Please enter both UID and new phone number to update.</h3><br/>";
+	echo "<h3>Terjadi kesalahan! Masukkan NIM dan nomor HP baru.</h3><br/>";
 	
 }
 
 //displaying success message for phone number update
 else{
-	echo "<h3>Phone number of student (University ID: " . "<i>$uid</i>" . ") has been successfully changed to ". $phone_number . "</h3><br/>" ;
+	echo "<h3>Nomor HP mahasiswa dengan NIM: " . "$uid" . " berhasil diubah menjadi ". $phone_number . "</h3><br/>" ;
 	//echo "<b>Database output</b><br/><br/>";
 	
 }
@@ -38,8 +39,8 @@ mysql_close();
 <br/>
 
 <!-- links to go to prev page and homepage -->
-<a href="update.html">Go back to previous page</a><br/>
-<a href="homepage.html">Go back to homepage</a>
+<a href="../update.html">Kembali ke laman sebelumnya</a><br/>
+<a href="../homepage.html">Kembali ke laman utama</a>
 </body>
 </center>
 </html>

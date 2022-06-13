@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang = "en">
 <center>
-<body bgcolor="#f4d6a0">
+<img src="logo.png" alt="Logo UMMI" style="width:175px"/>
+<body bgcolor="#fff">
 <?php include 'database.php'; ?>
 <br/>
 <?php
@@ -18,12 +19,12 @@ $result11 = mysql_query($query11);
 
 // checking to see that no empty fields were submitted
 if (empty($uid) || empty($email_id)){
-	echo "<h3>Error has occured. Please enter both UID and new Email address to update.</h3><br/>";	
+	echo "<h3>Terjadi kesalahan! Masukkan NIM dan alamat email baru!</h3><br/>";	
 }
     
 //displaying success message for email id update
 else{
-	echo "<h3>Email address of student (University ID: " . "<i>$uid</i>" . ") has been successfully changed to ". "$email_id" . "</h3><br/>" ;
+	echo "<h3>Alamat email mahasiswa (NIM: " . "$uid" . ") berhasil diubah menjadi ". "$email_id" . "</h3><br/>" ;
 	//echo "<b>Database output</b><br/><br/>";
 }
     
@@ -34,8 +35,8 @@ mysql_close();
 <br/>
 
 <!-- links to go to prev page and homepage -->
-<a href="update.html">Go back to previous page</a><br/>
-<a href="homepage.html">Go back to homepage</a>
+<a href="../update.html">Kembali ke laman sebelumnya</a><br/>
+<a href="../homepage.html">Kembali ke laman utama</a>
 </body>
 </center>
 </html>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang = "en">
 <center>
-<body bgcolor="#f4d6a0">
+<img src="logo.png" alt="Logo UMMI" style="width:175px"/>
+<body bgcolor="#fff">
 <style type="text/css">
 table
 	{
@@ -29,15 +30,15 @@ $result17 = mysql_query($query17);
 $num17 = mysql_num_rows($result17);
 
 if (mysql_affected_rows() > 0){
-	echo "<h3>The student (username " . "<i>$username</i>" . ") has the following details:</h3><br/>";
+	echo "<h3>Mahasiswa dengan nama pengguna " . "<i>$username</i>" . ") memiliki detail berikut:</h3><br/>";
 //echo "<b>Database output</b><br/><br/>";
 ?>
 <table border="1" cellspacing="4" cellpadding="10">
 <tr>
-<td><font face="Arial, Helvetica, sans-serif"><b>Username<b/></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Name</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Department</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Status<b/></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Nama Pengguna<b/></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Nama</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Program Studi</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Status Kelulusan<b/></font></td>
 </tr>
 <?php
 $i = 0;
@@ -61,14 +62,14 @@ while($i < $num17){
 <br/>
 <br/>
 <br/>
-<a href="username_search.html">Go back to previous page</a><br/>
-<a href="homepage.html">Go back to homepage</a>
+<a href="../username_search.html">Kembali ke laman sebelumnya</a><br/>
+<a href="../homepage.html">Kembali ke laman utama</a>
 <?php
 }
 else{
-	echo "<h3>This username does not exist in SIS. Please enter a valid username.</h3>";
-	echo "<a href='username_search.html'>Go back to previous page</a></br>";
-	echo "<a href='homepage.html'>Go back to homepage</a>";
+	echo "<h3>Nama pengguna ini tidak ada di pangkalan data. Masukkan nama pengguna yang benar.</h3>";
+	echo "<a href='../username_search.html'>Kembali ke laman sebelumnya</a></br>";
+	echo "<a href='../homepage.html'>Kembali ke laman utama</a>";
 }
 ?>
 

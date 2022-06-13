@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang = "en">
 <center>
-<body bgcolor="#f4d6a0">
+<img src="logo.png" alt="Logo UMMI" style="width:175px"/>
+<body bgcolor="#fff">
 <style type="text/css">
 table
 	{
@@ -26,15 +27,15 @@ $query4 = "select uid, username, first_name, last_name, dept from student where 
 $result4 = mysql_query($query4);
 $num4 = mysql_num_rows($result4);
 if(mysql_affected_rows() > 0){
-	echo "<h3>List of students with" . " " . "<i>$status</i>" . " " . "status: </h3>";
+	echo "<h3>Daftar mahasiswa dengan status kelulusan: " . " " . "$status" . "</h3>";
 //echo "<b>Database output</b><br/><br/>";
 ?>
 <table border = "1" cellspacing="4" cellpadding="10">
 <tr>
-<td><font face="Arial, Helvetica, sans-serif"><b>University ID</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Username</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Name</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Department</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>NIM</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Nama Pengguna</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Nama</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Program Studi</b></font></td>
 </tr>
 <?php
 $i = 0;
@@ -57,14 +58,14 @@ while($i < $num4){
 </table>
 <br/>
 <br/>
-<a href="status_search.html">Go back to previous page</a><br/>
-<a href="homepage.html">Go back to homepage</a>
+<a href="../status_search.html">Kembali ke laman sebelumnya</a><br/>
+<a href="../homepage.html">Kembali ke laman utama</a>
 <?php 
 }
 else{
-	echo "<h3>Error has occured. Please choose a status. </h3>";
-	echo "<a href='status_search.html'>Go back to previous page</a></br>";
-	echo "<a href='homepage.html'>Go back to homepage</a>";
+	echo "<b>Terjadi kesalahan karena salah satu alasan berikut:</b><br/>1. Anda tidak memilih status kelulusan. Pilih salah satu program studi di daftar.<br/>2. Tidak ada mahasiswa di status kelulusan yang dipilih.<br/><br/><br/>";
+	echo "<a href='../status_search.html'>Kembali ke laman sebelumnya</a></br>";
+	echo "<a href='../homepage.html'>Kembali ke laman utama</a>";
 }
 ?>
 

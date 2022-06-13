@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en">
 <center>
+<img src="logo.png" alt="Logo UMMI" style="width:175px"/>
 <body bgcolor="#fff">
 <!-- css styling block -->
 <style type="text/css">
@@ -28,38 +29,34 @@ $uid = $_POST['uid'];
 $query2 = "SELECT * FROM student WHERE uid = '$uid' ";
     
 // executing query and storing results in a variable
-$result1 = mysqli_query($connect, $query2);	
-$num1 = mysqli_num_rows($result1);
+$result1 = mysql_query($query2);	
+$num1 = mysql_num_rows($result1);
 
 // checking to see if any rows are affected and displaying results
-if(mysqli_affected_rows($connect, DB_NAME, $uid) > 0){
-	echo "<b>The student (University ID: " .$uid. ") has the following details:</b><br/><br/>";
+if(mysql_affected_rows() > 0){
+	echo "<b>Mahasiswa dengan NIM " .$uid. " memiliki detail berikut:</b><br/><br/>";
 ?>
 <br/>
 <table border = "1" cellspacing="4" cellpadding="10">
 <tr>
-<td><font face="Arial, Helvetica, sans-serif"><b>University ID</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Username</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Name</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Status</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Department</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Gender</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Date of Birth</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Email Address</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Phone Number</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>St. Address</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>City</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Zip Code</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>State</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>NIM</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Nama</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Program Studi</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Jenis Kelamin</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Tanggal Lahir</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Alamat Email</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Nomor HP</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Alamat</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Kota/Kabupaten</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Kode Pos</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Provinsi</b></font></td>
 </tr>
 <?php
 $i=0; 
 while($i < $num1){
 	$uid = mysql_result($result1, $i, "uid");
-	$username = mysql_result($result1, $i, "username");
 	$first_name = mysql_result($result1, $i, "first_name");
 	$last_name = mysql_result($result1, $i, "last_name");
-	$status = mysql_result($result1, $i, "status");
 	$dept = mysql_result($result1, $i, "dept");
 	$gender = mysql_result($result1, $i, "gender");
 	$birth_day = mysql_result($result1, $i, "birth_day");
@@ -74,9 +71,7 @@ while($i < $num1){
 ?>
 	<tr>
 	<td><font face="Arial, Helvetica, sans-serif"><?php echo $uid; ?></font></td>
-	<td><font face="Arial, Helvetica, sans-serif"><?php echo $username; ?></font></td>
 	<td><font face="Arial, Helvetica, sans-serif"><?php echo "$first_name $last_name"; ?></font></td>
-	<td><font face="Arial, Helvetica, sans-serif"><?php echo $status; ?></font></td>
 	<td><font face="Arial, Helvetica, sans-serif"><?php echo $dept; ?></font></td>
 	<td><font face="Arial, Helvetica, sans-serif"><?php echo $gender; ?></font></td>
 	<td><font face="Arial, Helvetica, sans-serif"><?php echo "$birth_day $birth_month $birth_year"; ?></font></td>
@@ -95,16 +90,16 @@ while($i < $num1){
 <br/>
 <br/>
 <br/>
-<a href="search.html">Go back to previous page</a>
+<a href="../search.html">Kembali ke laman sebelumnya</a>
 <br/>
-<a href="homepage.html">Go back to homepage</a>
+<a href="../homepage.html">Kembali ke laman utama</a>
 <?php 
 }
 // displaying error message if no rows are affected due to the query
 else{
-	echo "<h3>This University ID does not exist in SIS. Please enter a valid UID.</h3>";
-	echo "<a href='search.html'>Go back to previous page</a></br>";
-	echo "<a href='homepage.html'>Go back to homepage</a>";
+	echo "<h3>NIM tidak ditemukan di pangkalan data. Masukkan NIM yang valid!</h3>";
+	echo "<a href='../search.html'>Kembali ke laman sebelumnya</a></br>";
+	echo "<a href='../homepage.html'>Kembali ke laman utama</a>";
 }
 ?>
 

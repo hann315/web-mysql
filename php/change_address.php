@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en">
 <center>
+<img src="logo.png" alt="Logo UMMI" style="width:175px"/>
 <body bgcolor="#fff">
     
 <!-- including file for database connection -->
@@ -30,13 +31,13 @@ $result16 = mysql_query($query16);
 //checking to see that no fields were empty
 if(empty($uid) || empty($address) || empty($city) || empty($zip_code) || empty($state) )
 {
-	echo "<h3>Error has occured. Please fill all the fields to update address.</h3><br/>";
+	echo "<h3>Terjadi kesalahan! Isi semua bidang untuk memperbaharui alamat.</h3><br/>";
 		
 }
 //displaying success message for address update
 else{
 
-	echo "<h3>Address of the student (University ID: " . "<i>$uid</i>" . ") has been successfully changed to " . "<i>$address, $city, $state $zip_code</i></h3>" ;
+	echo "<h3>Alamat mahasiswa dengan NIM: " . "$uid" . " berhasil diubah menjadi " . "$address, $city, $state $zip_code</h3>" ;
 	//echo "<b>Database output</b><br/><br/>";
 	
 }
@@ -46,8 +47,8 @@ mysql_close();
 <br/>
 
 <!-- link to go to prev page and homepage -->
-<a href="update.html">Go back to previous page</a><br/>
-<a href="homepage.html">Go back to homepage</a>
+<a href="../update.html">Kembali ke laman sebelumnya</a><br/>
+<a href="../homepage.html">Kembali ke laman utama</a>
 </body>
 </center>
 </html>

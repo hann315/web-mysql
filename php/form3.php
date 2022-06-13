@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang = "en">
 <center>
-<body bgcolor="#f4d6a0">
+<img src="logo.png" alt="Logo UMMI" style="width:175px"/>
+<body bgcolor="#fff">
 <!-- css styling block -->
 <style type="text/css">
 table
@@ -31,20 +32,20 @@ $result10 = mysql_query($query10);
 $num10 = mysql_num_rows($result10);
 
 if(mysql_affected_rows() > 0){
-echo "<b>Please note that only Email-ID, Phone Number, and Address can be updated!</b><br/><h3>Student with University ID " ."<i>$uid</i>". " has the following details in SIS:</h3>";
+echo "<b>Hanya alamat email, nomor HP, dan alamat yang dapat diperbarui!</b><br/><h3>Mahasiswa dengan NIM " ."<i>$uid</i>". " memiliki detail berikut:</h3>";
 ?>
 <table border = "1" cellspacing="4" cellpadding="10">
 <tr>
-<td><font face="Arial, Helvetica, sans-serif"><b>University ID</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Username</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Name</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Status</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Department</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Gender</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Date of Birth</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Email Address</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Phone Number</b></font></td>
-<td><font face="Arial, Helvetica, sans-serif"><b>Address</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>NIM</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Nama Pengguna</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Nama</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Status Kelulusan</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Program Studi</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Jenis Kelamin</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Tanggal Lahir</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Alamat Email</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Nomor HP</b></font></td>
+<td><font face="Arial, Helvetica, sans-serif"><b>Alamat</b></font></td>
 </tr>
 
 <?php
@@ -75,24 +76,24 @@ while($i < $num10){
 	<td><font face="Arial, Helvetica, sans-serif"><?php echo $dept; ?></font></td>
 	<td><font face="Arial, Helvetica, sans-serif"><?php echo $gender; ?></font></td>
 	<td><font face="Arial, Helvetica, sans-serif"><?php echo "$birth_day $birth_month $birth_year"; ?></font></td>
-	<td><font face="Arial, Helvetica, sans-serif"><?php echo $email_id; ?><?php echo "<br/>" ;?><?php echo ("<button onclick=\"window.location.href='email_change.html'\">Update email address</button><br/>");?></font></td>
-	<td><font face="Arial, Helvetica, sans-serif"><?php echo $phone_number; ?><?php echo "<br/>" ;?><?php echo ("<button onclick=\"window.location.href='phone_change.html'\">Update phone number</button><br/>"); ?></font></td>
-	<td><font face="Arial, Helvetica, sans-serif"><?php echo "$address, $city, $state $zip_code"; ?><?php echo "<br/>" ;?><?php echo ("   <button onclick=\"window.location.href='address_change.html'\">Update address</button><br/>");?></font></td>
+	<td><font face="Arial, Helvetica, sans-serif"><?php echo $email_id; ?><?php echo "<br/>" ;?><?php echo ("<button onclick=\"window.location.href='../email_change.html'\">Perbarui alamat email</button><br/>");?></font></td>
+	<td><font face="Arial, Helvetica, sans-serif"><?php echo $phone_number; ?><?php echo "<br/>" ;?><?php echo ("<button onclick=\"window.location.href='../phone_change.html'\">Perbarui nomor HP</button><br/>"); ?></font></td>
+	<td><font face="Arial, Helvetica, sans-serif"><?php echo "$address, $city, $state $zip_code"; ?><?php echo "<br/>" ;?><?php echo ("   <button onclick=\"window.location.href='../address_change.html'\">Perbarui alamat</button><br/>");?></font></td>
 	</tr>
 <?php $i++; }?>
 <?php mysql_close();?>
 </table>
 <br/>
 <br/>
-<a href="update.html">Go back to previous page</a>
+<a href="../update.html">Kembali ke laman sebelumnya</a>
 <br/>
-<a href="homepage.html">Go back to homepage</a>	
+<a href="../homepage.html">Kembali ke laman utama</a>	
 <?php
 }
 else{
-	echo "<h3>This University ID does not exist in SIS. Please enter a valid UID.</h3>";
-	echo "<a href='update.html'>Go back to previous page</a></br>";
-	echo "<a href='homepage.html'>Go back to homepage</a>";
+	echo "<h3>NIM tidak ditemukan di pangkalan data. Masukkan NIM yang valid!</h3>";
+	echo "<a href='../update.html'>Kembali ke laman sebelumnya</a></br>";
+	echo "<a href='../homepage.html'>Kembali ke laman utama</a>";
 }
 ?>
 </body>

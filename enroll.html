@@ -4,7 +4,7 @@
 		<title>Pendaftaran Mahasiswa</title>
 	</head>
 	<center>
-		<img src="logo.png" alt="Logo UMMI" style="width:175px"/>
+	<img src="logo.png" alt="Logo UMMI" style="width:175px"/>
     <!-- css styling block -->
 	<style type="text/css">
 	h1
@@ -63,8 +63,8 @@
 	<tr>
 	<td>Status</td>
 	<td>
-	<input type="radio" name="status" value="undergrad"/> Belum lulus <br>
-	<input type="radio" name="status" value="grad"/> Lulus
+	<input type="radio" name="status" value="BelumLulus"/> Belum lulus <br>
+	<input type="radio" name="status" value="Lulus"/> Lulus
 	</td>
 	</tr>
 	
@@ -74,28 +74,9 @@
 	<td>
 	<select name="dept" id="dept">
 	<option value="-1">Program Studi</option>
-		<option value="AERO">AERO</option>
-		<option value="BIOL">BIOL</option>
-		<option value="BUS">BUS</option>
-		<option value="CGT">CGT</option>
-		<option value="CIT">CIT</option>
-		<option value="CSCI">CSCI</option>
-		<option value="DENT">DENT</option>
-		<option value="ECE">ECE</option>
-		<option value="ECON">ECON</option>
-		<option value="FILM">FILM</option>
-		<option value="INFO">INFO</option>
-		<option value="JOUR">JOUR</option>
-		<option value="LAW">LAW</option>
-		<option value="MATH">MATH</option>
-		<option value="MECH">MECH</option>
-		<option value="MED">MED</option>
-		<option value="MUS">MUS</option>
-		<option value="NURS">NURS</option>
-		<option value="PBHL">PBHL</option>
-		<option value="PHYS">PHYS</option>
-		<option value="STAT">STAT</option>
-		<option value="TECH">TECH</option>
+		<option value="Kimia">Kimia</option>
+		<option value="TeknikInformatika">Teknik Informatika</option>
+		<option value="TeknikSipil">Teknik Sipil</option>
 	</select>
 	</td>
 	</tr>
@@ -104,8 +85,8 @@
 	<tr>
 	<td>Jenis Kelamin</td>
 	<td>
-	<input type="radio" name="gender" value="male"/> Laki-laki <br>
-	<input type="radio" name="gender" value="female"/> Perempuan
+	<input type="radio" name="gender" value="Laki-laki"/> Laki-laki <br>
+	<input type="radio" name="gender" value="Perempuan"/> Perempuan
 	</td>
 	</tr>
 	
@@ -150,18 +131,18 @@
 	
 	<select name="birth_month" id="birth_month">
 	<option value="-1">Bulan</option>
-		<option value="January">Jan</option>
-		<option value="February">Feb</option>
-		<option value="March">Mar</option>
+		<option value="Januari">Jan</option>
+		<option value="Februari">Feb</option>
+		<option value="Maret">Mar</option>
 		<option value="April">Apr</option>
-		<option value="May">May</option>
-		<option value="June">Jun</option>
-		<option value="July">Jul</option>
-		<option value="August">Aug</option>
+		<option value="Mei">Mei</option>
+		<option value="Juni">Jun</option>
+		<option value="Juli">Jul</option>
+		<option value="Agustus">Ags</option>
 		<option value="September">Sep</option>
-		<option value="October">Oct</option>
+		<option value="Oktober">Okt</option>
 		<option value="November">Nov</option>
-		<option value="December">Dec</option>
+		<option value="Desember">Des</option>
 	</select>
 	
 	<select name="birth_year" id="birth_year">
@@ -222,7 +203,7 @@
     <!-- row to enter phone number-->
 	<tr>
 	<td>Nomor HP</td>
-	<td><input type="text" name="phone_number" maxlength="10"/></td>
+	<td><input type="text" name="phone_number" maxlength="13"/></td>
 	</tr>
 	
     <!-- row to enter address-->
@@ -233,7 +214,7 @@
 	
     <!-- row to enter city name-->
 	<tr>
-	<td>Kota</td>
+	<td>Kota/Kabupaten</td>
 	<td><input type="text" name="city" maxlength="30"/></td>
 	</tr>
 	
@@ -248,41 +229,41 @@
 	<td>Provinsi</td>
 	<td>
 	<select name="state" id="state">
-	<option value="-1">Provinsi</option>
-	<option value="aceh">Aceh</option>
-	<option value="Sumut">Sumatera Utara</option>
-	<option value="sumbar">Sumatera Barat</option>
-	<option value="Riau">Riau</option>
-	<option value="Jambi">Jambi</option>
-	<option value="Sumsel">Sumatera Selatan</option>
-	<option value="Bengkulu">Bengkulu</option>
-	<option value="Lampung">Lampung</option>
-	<option value="BaBel">Kep. Bangka Belitung</option>
-	<option value="kepRiau">Kepulauan Riau</option>
-	<option value="Jakarta">Jakarta</option>
-	<option value="Jabar">Jawa Barat</option>
-	<option value="Banten">Banten</option>
-	<option value="Jateng">Jawa Tengah</option>
-	<option value="Yogyakarta">Yogyakarta</option>
-	<option value="Jatim">Jawa Timur</option>
-	<option value="Kalbar">Kalimantan Barat</option>
-	<option value="Kalteng">Kalimantan Tengah</option>
-	<option value="Kalsel">Kalimantan Selatan</option>
-	<option value="Kaltim">Kalimantan Timur</option>
-	<option value="Kaltra">Kalimantan Utara</option>
-	<option value="Bali">Bali</option>
-	<option value="NTT">Nusa Tenggara Timur</option>
-	<option value="NTB">Nusa Tenggara Barat</option>
-	<option value="Sulut">Sulawesi Utara</option>
-	<option value="Sulteng">Sulawesi Tengah</option>
-	<option value="Sulsel">Sulawesi Selatan</option>
-	<option value="Sultengg">Sulawesi Tenggara</option>
-	<option value="Sulbar">Sulawesi Barat</option>
-	<option value="Gorontalo">Gorontalo</option>
-	<option value="Maluku">Maluku</option>
-	<option value="Maluku Utara">Maluku Utara</option>
-	<option value="Papua">Papua</option>
-	<option value="Papua Barat">Papua Barat</option>
+		<option value="-1">Provinsi</option>
+		<option value="Aceh">Aceh</option>
+		<option value="Sumut">Sumatera Utara</option>
+		<option value="Sumbar">Sumatera Barat</option>
+		<option value="Riau">Riau</option>
+		<option value="Jambi">Jambi</option>
+		<option value="Sumsel">Sumatera Selatan</option>
+		<option value="Bengkulu">Bengkulu</option>
+		<option value="Lampung">Lampung</option>
+		<option value="BaBel">Kep. Bangka Belitung</option>
+		<option value="kepRiau">Kepulauan Riau</option>
+		<option value="Jakarta">Jakarta</option>
+		<option value="Jabar">Jawa Barat</option>
+		<option value="Banten">Banten</option>
+		<option value="Jateng">Jawa Tengah</option>
+		<option value="Yogyakarta">Yogyakarta</option>
+		<option value="Jatim">Jawa Timur</option>
+		<option value="Kalbar">Kalimantan Barat</option>
+		<option value="Kalteng">Kalimantan Tengah</option>
+		<option value="Kalsel">Kalimantan Selatan</option>
+		<option value="Kaltim">Kalimantan Timur</option>
+		<option value="Kaltra">Kalimantan Utara</option>
+		<option value="Bali">Bali</option>
+		<option value="NTT">Nusa Tenggara Timur</option>
+		<option value="NTB">Nusa Tenggara Barat</option>
+		<option value="Sulut">Sulawesi Utara</option>
+		<option value="Sulteng">Sulawesi Tengah</option>
+		<option value="Sulsel">Sulawesi Selatan</option>
+		<option value="Sultengg">Sulawesi Tenggara</option>
+		<option value="Sulbar">Sulawesi Barat</option>
+		<option value="Gorontalo">Gorontalo</option>
+		<option value="Maluku">Maluku</option>
+		<option value="Malut">Maluku Utara</option>
+		<option value="Papua">Papua</option>
+		<option value="Papua_Barat">Papua Barat</option>
 	</select>
 	</td>
 	</tr>
