@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en">
 <center>
-<body bgcolor="#f4d6a0">
+<body bgcolor="#fff">
     
 <!-- including file for database connection -->
 <?php include 'database.php'; ?>

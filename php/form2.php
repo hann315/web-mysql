@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en">
 <center>
-<body bgcolor="#f4d6a0">
+<body bgcolor="#fff">
 <!-- css styling block -->
 <style type="text/css">
 table
@@ -28,11 +28,11 @@ $uid = $_POST['uid'];
 $query2 = "SELECT * FROM student WHERE uid = '$uid' ";
     
 // executing query and storing results in a variable
-$result1 = mysql_query($query2);	
-$num1 = mysql_num_rows($result1);
+$result1 = mysqli_query($connect, $query2);	
+$num1 = mysqli_num_rows($result1);
 
 // checking to see if any rows are affected and displaying results
-if(mysql_affected_rows() > 0){
+if(mysqli_affected_rows($connect, DB_NAME, $uid) > 0){
 	echo "<b>The student (University ID: " .$uid. ") has the following details:</b><br/><br/>";
 ?>
 <br/>

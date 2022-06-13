@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = "en">
 <center>
-<body bgcolor="#f4d6a0">
+<body bgcolor="#fff">
 <style type="text/css">
 table
 	{
@@ -34,9 +34,9 @@ table
 $uid = $_POST['uid'];	
 $query8 = "SELECT username, first_name, last_name, status, dept FROM student where uid = '$uid' ";
 
-$result8 = mysql_query($query8);
-$num8 = mysql_num_rows($result8);
-if(mysql_affected_rows()>0)
+$result8 = mysqli_query($connect, $query8);
+$num8 = mysqli_num_rows($result8);
+if(mysqli_affected_rows($connect)>0)
 {
 echo "<h3>The student (<i>University ID: " .$uid. "</i>) with the following information will be PERMANENTLY deleted from the SIS database.</h3>";
 ?>
@@ -52,20 +52,20 @@ echo "<h3>The student (<i>University ID: " .$uid. "</i>) with the following info
 $i = 0;
 while($i < $num8)
 {
-	$username = mysql_result($result8, $i, "username");
-	$first_name = mysql_result($result8, $i, "first_name");
-	$last_name = mysql_result($result8, $i, "last_name");
-	$status = mysql_result($result8, $i, "status");
-	$dept = mysql_result($result8, $i, "dept");
+	$username = mysqli_fetch_assoc($result8);
+	$first_name = mysqli_fetch_assoc($result8);
+	$last_name = mysqli_fetch_assoc($result8);
+	$status = mysqli_fetch_assoc($result8);
+	$dept = mysqli_fetch_assoc($result8);
 ?>
 <tr>
-	<td><font face="Arial, Helvetica, sans-serif"><?php echo $username; ?></font></td>
+	<td><font face="Arial, Helvetica, sans-serif"><?php var_dump($username); ?></font></td>
 	<td><font face="Arial, Helvetica, sans-serif"><?php echo "$first_name $last_name"; ?></font></td>
 	<td><font face="Arial, Helvetica, sans-serif"><?php echo $status; ?></font></td>
 	<td><font face="Arial, Helvetica, sans-serif"><?php echo $dept; ?></font></td>
 </tr>
 <?php $i++; }?>
-<?php mysql_close(); ?>
+<?php mysqli_close($connect); ?>
 </table>
 <br/>
 <br/>
