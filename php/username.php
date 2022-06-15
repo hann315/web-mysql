@@ -68,7 +68,7 @@ while($i < $num17){
 <?php
 }
 else{
-	echo "<h3>Nama pengguna ini tidak ada di pangkalan data. Masukkan nama pengguna yang benar.</h3>";
+	echo "<h3>Nama pengguna ini tidak ada di pangkalan data!</h3>";
 	echo "<a href='../username_search.html'>Kembali ke laman sebelumnya</a></br>";
 	echo "<a href='../index.html'>Kembali ke laman utama</a>";
 }

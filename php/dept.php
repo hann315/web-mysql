@@ -35,7 +35,7 @@ $num5 = mysql_num_rows($result5);
 
 // checking if rows are affected to display results
 if(mysql_affected_rows() > 0 ){
-	echo "<h3>List of students in" . " " . "<i>$dept</i>" . " " . "department: </h3>";
+	echo "<h3>Daftar Mahasiswa di program studi" . " " . "$dept" . " " . "</h3>";
 //echo "<b>Database output</b><br/><br/>";
 ?>
 <table border = "1" cellspacing="4" cellpadding="10">

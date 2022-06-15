@@ -11,12 +11,12 @@ mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD);
 $connect = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD);
 
 //selecting database
-@mysql_select_db(DB_NAME) or die("Unable to select database");
+@mysql_select_db(DB_NAME) or die("Tidak dapat menemukai pangkalan data!");
 
 //checking for failed connection
 if(mysqli_connect_errno($connect))
 {
-	echo 'Failed to connect';
+	echo 'Tidak dapat menyambungkan';
 }
 
 // Report all errors except E_NOTICE

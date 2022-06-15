@@ -29,7 +29,7 @@ $result7 = mysql_query($query7);
 $num7 = mysql_num_rows($result7);
 
 if(mysql_affected_rows() > 0){
-	echo "<h3>List of students in" . " " . $state . " state:</h3>";
+	echo "<h3>Daftar mahasiswa dari provinsi" . " " . $state . "</h3>";
 ?>
 <table border = "1" cellspacing="4" cellpadding="10">
 <tr>
